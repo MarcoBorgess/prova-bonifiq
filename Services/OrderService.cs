@@ -6,18 +6,20 @@ namespace ProvaPub.Services
 	{
 		public async Task<Order> PayOrder(string paymentMethod, decimal paymentValue, int customerId)
 		{
-			if (paymentMethod == "pix")
+			switch (paymentMethod)
 			{
-				//Faz pagamento...
-			}
-			else if (paymentMethod == "creditcard")
-			{
-				//Faz pagamento...
-			}
-			else if (paymentMethod == "paypal")
-			{
-				//Faz pagamento...
-			}
+				case "pix":
+					//Faz pagamento...
+					break;
+				case "creditcard":
+					//Faz pagamento...
+					break;
+				case "paypal":
+					//Faz pagamento...
+					break;
+				default:
+					break;
+            }
 
 			return await Task.FromResult( new Order()
 			{
